@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Profil administrator lab jaringan SMK Negeri 1 Banyumas.">
+  <title>Muhammad Haikal Kamil | Lab TJKT</title>
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --surface: #ffffff;
+      --ink: #111827;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #7c3aed;
+      --accent2: #ec4899;
+      --navy: #111827;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif; line-height: 1.6;
+    }
+    .topbar {
+      position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      max-width: 1050px; margin: auto; padding: 14px 22px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .brand { font-weight: 800; letter-spacing: -.4px; }
+    .brand span { color: var(--accent); }
+    .nav small { color: var(--muted); }
+    .hero {
+      background: linear-gradient(120deg, #111827 0%, #312e81 55%, #7c3aed 100%);
+      color: white; padding: 64px 20px 92px;
+    }
+    .hero-inner { max-width: 950px; margin: auto; display: flex; align-items: center; gap: 28px; }
+    .avatar {
+      width: 112px; height: 112px; flex: 0 0 112px; border-radius: 50%;
+      display: grid; place-items: center; font-size: 2.2rem; font-weight: 800;
+      background: linear-gradient(135deg, var(--accent2), #8b5cf6);
+      border: 4px solid rgba(255,255,255,.85); box-shadow: 0 8px 30px rgba(0,0,0,.25);
+    }
+    .eyebrow {
+      display: inline-block; border: 1px solid rgba(255,255,255,.28);
+      background: rgba(255,255,255,.1); padding: 5px 12px; border-radius: 30px;
+      font-size: .78rem; letter-spacing: .5px; text-transform: uppercase;
+    }
+    h1 { margin: 10px 0 3px; font-size: clamp(1.8rem, 5vw, 2.7rem); line-height: 1.15; }
+    .hero p { margin: 6px 0; color: #e5e7eb; }
+    .status { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-size: .85rem; color: #dcfce7; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 4px rgba(74,222,128,.15); }
+    main { max-width: 950px; margin: -42px auto 40px; padding: 0 20px; position: relative; }
+    .panel {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+      padding: 25px; margin-bottom: 18px; box-shadow: 0 10px 28px rgba(17,24,39,.06);
+    }
+    .section-title { display: flex; align-items: center; gap: 10px; margin: 0 0 17px; font-size: 1.15rem; }
+    .section-title:before { content: ""; width: 5px; height: 22px; border-radius: 5px; background: linear-gradient(var(--accent),var(--accent2)); }
+    .profile-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px 22px; }
+    .item { padding: 10px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+    .item small { display: block; color: var(--muted); margin-bottom: 3px; }
+    .item strong { overflow-wrap: anywhere; }
+    .cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 13px; }
+    .card { padding: 17px; border-radius: 14px; background: #f9fafb; border: 1px solid var(--line); }
+    .card .symbol { font-size: 1.35rem; }
+    .card h3 { margin: 8px 0 3px; font-size: 1rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { padding: 7px 11px; border-radius: 30px; background: #f3e8ff; color: #6b21a8; font-size: .85rem; font-weight: 600; }
+    .project { border-left: 3px solid var(--accent); padding: 3px 0 3px 15px; margin: 12px 0; }
+    .project p { margin: 3px 0; color: var(--muted); }
+    .monitor {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      background: #111827; color: white; border-radius: 16px; padding: 22px;
+    }
+    .monitor p { margin: 4px 0 0; color: #cbd5e1; font-size: .9rem; }
+    .btn {
+      display: inline-block; white-space: nowrap; text-decoration: none; color: white;
+      background: linear-gradient(100deg,var(--accent),var(--accent2));
+      padding: 11px 17px; border-radius: 10px; font-weight: 700; transition: transform .2s, opacity .2s;
+    }
+    .btn:hover { transform: translateY(-2px); opacity: .92; }
+    footer { text-align: center; color: var(--muted); padding: 10px 20px 30px; font-size: .88rem; }
+    @media (max-width: 650px) {
+      .hero { padding: 45px 20px 78px; }
+      .hero-inner { flex-direction: column; text-align: center; gap: 15px; }
+      .profile-grid, .cards { grid-template-columns: 1fr; }
+      .monitor { align-items: flex-start; flex-direction: column; }
+      .panel { padding: 20px; }
+      .nav small { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <nav class="nav">
+      <div class="brand">LAB<span>TJKT</span></div>
+      <small>SMK Negeri 1 Banyumas · UKK 2026</small>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="avatar" aria-label="Inisial HK">HK</div>
+      <div>
+        <span class="eyebrow">Administrator Lab / Web</span>
+        <h1 id="nama">Muhammad Haikal Kamil</h1>
+        <p id="kelas">XII TJKT 1 · SMK Negeri 1 Banyumas</p>
+        <div class="status"><span class="dot"></span><span id="statusText">Profil server aktif</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2 class="section-title">Profil Administrator</h2>
+      <div class="profile-grid">
+        <div class="item"><small>Nama lengkap</small><strong id="namaInfo"></strong></div>
+        <div class="item"><small>Kelas</small><strong id="kelasInfo"></strong></div>
+        <div class="item"><small>Sekolah</small><strong id="sekolahInfo"></strong></div>
+        <div class="item"><small>Program keahlian</small><strong id="jurusanInfo"></strong></div>
+        <div class="item"><small>Nomor absen</small><strong id="absenInfo"></strong></div>
+        <div class="item"><small>Peran</small><strong>Administrator Lab/Web</strong></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Layanan Server</h2>
+      <div class="cards">
+        <article class="card"><div class="symbol">🌐</div><h3>DNS Server</h3><p>BIND9 · Domain lab-smk.xyz</p></article>
+        <article class="card"><div class="symbol">🖥️</div><h3>Web Server</h3><p>Nginx · HTTPS</p></article>
+        <article class="card"><div class="symbol">📊</div><h3>Monitoring</h3><p>Netdata · Server & Router</p></article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Kompetensi</h2>
+      <div class="tags">
+        <span class="tag">Administrasi Jaringan</span>
+        <span class="tag">MikroTik</span>
+        <span class="tag">Linux Server</span>
+        <span class="tag">DNS & Web Server</span>
+        <span class="tag">Internet of Things</span>
+        <span class="tag">Cloud Computing</span>
+      </div>
+      <div class="project">
+        <strong>Proyek: IoT Gas Detector</strong>
+        <p>Sistem pendeteksi gas menggunakan ESP32 dan sensor MQ-2.</p>
+      </div>
+      <div class="project">
+        <strong>Prestasi: Juara 1 LKS tingkat Kabupaten Banyumas</strong>
+        <p>Pengalaman kompetisi bidang keahlian jaringan dan teknologi informasi.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Informasi Jaringan</h2>
+      <div class="profile-grid">
+        <div class="item"><small>Domain utama</small><strong>lab-smk.xyz</strong></div>
+        <div class="item"><small>IP server</small><strong>192.168.30.10</strong></div>
+        <div class="item"><small>Halaman diakses melalui</small><strong id="alamat">-</strong></div>
+        <div class="item"><small>Waktu akses</small><strong id="waktu">-</strong></div>
+      </div>
+    </section>
+
+    <section class="monitor">
+      <div>
+        <strong>Dashboard Monitoring Server</strong>
+        <p>Lihat pemantauan server dan jaringan melalui Netdata.</p>
+      </div>
+      <a class="btn" href="https://monitor.lab-smk.xyz" target="_blank" rel="noopener noreferrer">Buka Monitoring ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="tahun"></span> Muhammad Haikal Kamil · XII TJKT 1 · SMK Negeri 1 Banyumas
+  </footer>
+
+  <script>
+    // Ubah nomor absen di sini sebelum deployment jika sudah diketahui.
+    const DATA_SISWA = {
+      nama: "Muhammad Haikal Kamil",
+      kelas: "XII TJKT 1",
+      sekolah: "SMK Negeri 1 Banyumas",
+      jurusan: "Teknik Jaringan Komputer dan Telekomunikasi",
+      nomorAbsen: "ISI NOMOR ABSEN"
+    };
+
+    document.getElementById("nama").textContent = DATA_SISWA.nama;
+    document.getElementById("kelas").textContent = DATA_SISWA.kelas + " · " + DATA_SISWA.sekolah;
+    document.getElementById("namaInfo").textContent = DATA_SISWA.nama;
+    document.getElementById("kelasInfo").textContent = DATA_SISWA.kelas;
+    document.getElementById("sekolahInfo").textContent = DATA_SISWA.sekolah;
+    document.getElementById("jurusanInfo").textContent = DATA_SISWA.jurusan;
+    document.getElementById("absenInfo").textContent = DATA_SISWA.nomorAbsen;
+    document.getElementById("alamat").textContent = window.location.hostname;
+    document.getElementById("tahun").textContent = new Date().getFullYear();
+
+    function perbaruiWaktu() {
+      document.getElementById("waktu").textContent =
+        new Date().toLocaleString("id-ID", { dateStyle: "full", timeStyle: "medium" });
+    }
+    perbaruiWaktu();
+    setInterval(perbaruiWaktu, 1000);
+    document.title = DATA_SISWA.nama + " | Lab TJKT";
+  </script>
+</body>
+</html>
