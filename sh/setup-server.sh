@@ -341,7 +341,7 @@ cat > "${WEBROOT}/index.html" <<'HTMLEOF'
       kelas: "XII TJKT 1",
       sekolah: "SMK Negeri 1 Banyumas",
       jurusan: "Teknik Jaringan Komputer dan Telekomunikasi",
-      nomorAbsen: "ISI NOMOR ABSEN"
+      nomorAbsen: "23"
     };
 
     document.getElementById("nama").textContent = DATA_SISWA.nama;
