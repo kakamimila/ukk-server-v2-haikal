@@ -28,7 +28,7 @@ Ganti `USERNAME` dan `NAMA-REPO` dengan milik sendiri.
 Jalankan setelah langkah konfigurasi IP, tes gateway, tes internet, dan penyesuaian repository sesuai instruksi guru:
 
 ```bash
-wget https://raw.githubusercontent.com/kakamimila/ukk-server-v2-haikal/refs/heads/main/sh/setup-server.sh
+wget https://raw.githubusercontent.com/kakamimila/ukk-server-v2-haikal/main/sh/setup-server.sh -O setup-server.sh
 sudo chmod +x setup-server.sh
 sudo ./setup-server.sh
 ```
