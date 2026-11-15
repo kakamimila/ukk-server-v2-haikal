@@ -8,7 +8,7 @@ Paket ini berisi:
 - Nama: Muhammad Haikal Kamil
 - Kelas: XII TJKT 1
 - Sekolah: SMK Negeri 1 Banyumas
-- Nomor absen: masih placeholder `ISI NOMOR ABSEN`
+- Nomor absen: 23
 
 ## Penting sebelum deployment
 1. Pastikan konfigurasi IP static dan internet server sudah berhasil sesuai README guru.
