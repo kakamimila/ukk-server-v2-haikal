@@ -20,7 +20,7 @@ Paket ini berisi:
 Buat repository GitHub baru, set **Public** agar raw file bisa diunduh oleh server. Buat folder `sh` di repository, lalu unggah `setup-server.sh` ke folder `sh`. Opsional: unggah `index.html` dan README ini di folder yang sama.
 
 Setelah file tampil di GitHub, buka `sh/setup-server.sh`, tekan **Raw**, dan pastikan URL berformat:
-`https://raw.githubusercontent.com/USERNAME/NAMA-REPO/main/sh/setup-server.sh`
+`https://raw.githubusercontent.com/kakamimila/ukk-server-v2-haikal/refs/heads/main/sh/setup-server.sh`
 
 Ganti `USERNAME` dan `NAMA-REPO` dengan milik sendiri.
 
@@ -28,7 +28,7 @@ Ganti `USERNAME` dan `NAMA-REPO` dengan milik sendiri.
 Jalankan setelah langkah konfigurasi IP, tes gateway, tes internet, dan penyesuaian repository sesuai instruksi guru:
 
 ```bash
-wget https://raw.githubusercontent.com/USERNAME/NAMA-REPO/main/sh/setup-server.sh -O setup-server.sh
+wget https://raw.githubusercontent.com/kakamimila/ukk-server-v2-haikal/refs/heads/main/sh/setup-server.sh
 sudo chmod +x setup-server.sh
 sudo ./setup-server.sh
 ```
